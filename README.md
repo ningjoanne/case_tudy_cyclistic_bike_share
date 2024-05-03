@@ -108,6 +108,7 @@ Steps and scenarios show below:
 *   Remove longitude and latitude as we won’t need these columns in the following analysis.
 *   Rename member\_casuaul column to membershiptype.
 
+```
     CREATE TABLE tripdata_12m_new AS
     
     SELECT ride_id,
@@ -133,7 +134,7 @@ Steps and scenarios show below:
     		AND end_station_id IS NOT NULL
                     AND (ended_at - started_at) > INTERVAL '0' SECOND
     		AND (ended_at - started_at) < INTERVAL '24' HOUR;
-    
+```    
 
 4\. The result shows 4,331,781 rows in the new table after cleaning and the data is ready to export and using in Tableau.
 
